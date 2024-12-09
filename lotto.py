@@ -6,7 +6,8 @@ def lotto1():
     random.randint(1,90)
     print(random)
 
-    for i in range (0,5)
+    for i in range (0,5):
+        int(input(szamok))
         
 
 lotto1()
