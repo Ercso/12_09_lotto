@@ -6,7 +6,7 @@ def lottó_játék():
     print("1. 5/90 lottó")
     print("2. 6/45 lottó")
     
-    választás = input("Kérem, válasszon (1 vagy 2): ")
+    választás = input("Válassz a 2 közül (1 vagy 2): ")
     
     if választás == '1':
         számok = 5
@@ -15,7 +15,7 @@ def lottó_játék():
         számok = 6
         max_szám = 45
     else:
-        print("Érvénytelen választás!")
+        print("Érvénytelen!")
         return
 
     tippelt_számok = set()
@@ -27,7 +27,7 @@ def lottó_játék():
             else:
                 print(f"A számnak 1 és {max_szám} között kell lennie.")
         except ValueError:
-            print("Kérem, érvényes számot adjon meg.")
+            print("Érvényes számot adj meg.")
 
 
     nyerő_számok = set(random.sample(range(1, max_szám + 1), számok))
@@ -40,5 +40,5 @@ def lottó_játék():
     if találatok:
         print(f"A találatok: {sorted(találatok)}")
     else:
-        print("Sajnos nem volt találata.")
+        print("Sajnos nem volt találatod.")
 lottó_játék()
